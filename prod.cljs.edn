@@ -1,0 +1,3 @@
+{:main graphsimplification.core
+:optimizations :advanced
+}

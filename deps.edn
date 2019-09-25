@@ -1,0 +1,16 @@
+{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        org.clojure/clojurescript {:mvn/version "1.10.339"}
+        com.bhauman/figwheel-main {:mvn/version "0.2.3"}
+        reagent/reagent {:mvn/version "0.8.1"}
+        cljs-http {:mvn/version "0.1.46"}
+        com.jameslaverack/cljfmt-runner {:git/url "https://github.com/JamesLaverack/cljfmt-runner"
+                                         :sha "97960e9a6464935534b5a6bab529e063d0027128"}
+        ;; optional but recommended		
+        com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}}
+ :aliases {:fig {:main-opts ["-m" "figwheel.main"]}
+           :lint {:main-opts ["-m" "cljfmt-runner.check"]}
+           :lint/fix {:main-opts ["-m" "cljfmt-runner.fix"]}
+           :build-prod {:main-opts ["-m" "figwheel.main" "-bo" "prod"]}
+           :serve-dev {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}}
+ :paths ["src" "cljs-src" "resources" "target"]}
+
